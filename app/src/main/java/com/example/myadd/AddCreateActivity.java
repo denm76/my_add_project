@@ -2,6 +2,8 @@ package com.example.myadd;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 public class AddCreateActivity extends AppCompatActivity {
@@ -10,5 +12,9 @@ public class AddCreateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_create);
+    }
+
+    public static Intent newIntent(Context context) {
+        return new Intent(context, AddCreateActivity.class);
     }
 }
