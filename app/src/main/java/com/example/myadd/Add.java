@@ -8,15 +8,15 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "adds")
 public class Add {
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     private int id;
 
     private String title;
     private String text;
-    private int price;
+    private String price;
     private int priority;
 
-    public Add(int id, String title, String text, int price, int priority) {
+    public Add(int id, String title, String text, String price, int priority) {
         this.id = id;
         this.title = title;
         this.text = text;
@@ -25,7 +25,7 @@ public class Add {
     }
 
     @Ignore
-    public Add(String title, String text, int price, int priority) {
+    public Add(String title, String text, String price, int priority) {
         this(
                 0,
                 title,
@@ -47,7 +47,7 @@ public class Add {
         return text;
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 

@@ -79,8 +79,8 @@ public class AddsAdapter extends RecyclerView.Adapter <AddsAdapter.AddsViewHolde
         return adds.size();
     }
 
-    class AddsViewHolder extends RecyclerView.ViewHolder {
-        private LinearLayout linearAddItem;
+    static class AddsViewHolder extends RecyclerView.ViewHolder {
+        private final LinearLayout linearAddItem;
 
         public AddsViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -91,4 +91,6 @@ public class AddsAdapter extends RecyclerView.Adapter <AddsAdapter.AddsViewHolde
     interface OnNoteClickListener {
         void onNoteClick(Add add);
     }
+
+
 }

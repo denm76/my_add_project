@@ -21,7 +21,12 @@ public class Database {
     private Database() {
         Random random = new Random();
         for (int i = 0; i < 20; i++) {
-            Add add = new Add("Add" + i, "Add" + i, random.nextInt(1500) + 20, random.nextInt(3));
+            Add add = new Add(
+                    "Add" + i,
+                    "Add" + i,
+                    String.valueOf(random.nextInt(1500) + 20), random.nextInt(3)
+            );
+
             adds.add(add);
         }
     }
